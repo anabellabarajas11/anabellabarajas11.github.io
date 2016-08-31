@@ -1150,7 +1150,7 @@
 				overflow-y: scroll;
 				background-attachment: fixed;
 				font-size: 14pt;
-				line-height: 1.75em;
+				line-height: 1.65em;
 			}
 
 			input, textarea, select {
@@ -1176,7 +1176,7 @@
 		/* Section/Article */
 
 			header {
-				margin: 0 0 1.5em 0;
+				margin: 0 0 1.5em 0; /* default 1.5em and 0.5em */
 			}
 
 				header > p {
