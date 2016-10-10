@@ -15,10 +15,10 @@
 			fadeSpeed: 300,
 
 		// Size factor.
-			sizeFactor: 13.5, // default 11.5
+			sizeFactor: 11.5, // default 11.5
 
 		// Minimum point size.
-			sizeMin: 5, // default 15
+			sizeMin: 15, // default 15
 
 		// Maximum point size.
 			sizeMax: 20 //defualt 20
