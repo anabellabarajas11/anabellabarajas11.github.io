@@ -1158,9 +1158,11 @@
 				line-height: 1.75em;
 			}
 
-			h1 {
-				font-size: 2.4em;
-				letter-spacing: -0.015em;
+			header >h1 {
+				line-height: 100%;
+				font-size: 250%;
+				margin-bottom: 20px;
+				/* letter-spacing: -0.015em; */
 			}
 
 			h2 {
@@ -1168,11 +1170,35 @@
 				letter-spacing: -0.015em;
 			}
 
-			h3, h4, h5, h6 {
+			h3 {
 				font-size: 1.25em;
 				letter-spacing: -0.015em;
 				color: #990033;
+
 			}
+
+			h4 {
+				text-align: left;
+				line-height: 24px;
+				font-size: 22px;
+				color: #990033;
+			}
+
+			h5 {
+				text-align: left;
+				line-height: 30px;
+				font-size: 18px;
+			} 
+
+			h6 {
+				font-size: 15px;
+			}
+
+			/* h3, h4, h5, h6 {
+				font-size: 1.25em;
+				letter-spacing: -0.015em;
+				color: #990033;
+			} */
 
 		/* Section/Article */
 
