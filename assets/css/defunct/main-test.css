@@ -26,7 +26,7 @@
 		line-height: 1;
 	}
 
-	li {
+	article >  li {
 		margin-left: 40px;
 	}
 	blockquote, q {
@@ -1012,7 +1012,7 @@
 	}
 
 		ul.default li {
-			padding-left: 0.5em;
+			padding-left: 40px;
 		}
 
 	ul.actions li {
@@ -1158,39 +1158,50 @@
 				line-height: 1.75em;
 			}
 
-			header >h1 {
+			header > h1 {
 				line-height: 100%;
 				font-size: 250%;
 				margin-bottom: 20px;
 				/* letter-spacing: -0.015em; */
 			}
 
-			h2 {
-				font-size: 1.8em;
-				letter-spacing: -0.015em;
+			section > h1 {
+			    font-size: 100%;
+			    line-height: 120%;
+			    text-transform: uppercase;
+			}
+			h1, section > article > h1, section > article > center > h1, section > article > header > h1 {
+			    font-size: 100%;
+			    line-height: 120%;
 			}
 
-			h3 {
+			h2, section > h2, section > article > h2, section > article > center > h2, section > article > header > h2 {
+				font-size: 1.8em;
+				letter-spacing: -0.015em;
+				padding-bottom: 20px;
+			}
+
+			h3, section > h3, section > article > h3, section > article > center > h3{
 				font-size: 1.25em;
 				letter-spacing: -0.015em;
 				color: #990033;
 
 			}
 
-			h4 {
+			h4, section > h4, section > article > h4, section > article > center > h4 {
 				text-align: left;
 				line-height: 24px;
 				font-size: 22px;
 				color: #990033;
 			}
 
-			h5 {
+			h5, section > h5, section > article > h5, section > article > center > h5 {
 				text-align: left;
 				line-height: 30px;
 				font-size: 18px;
 			} 
 
-			h6 {
+			h6, section > h6, section > article > h6, section > article > center > h6 {
 				font-size: 15px;
 			}
 
@@ -1203,11 +1214,11 @@
 		/* Section/Article */
 
 			header {
-				margin: 0 0 1.5em 0; /* default 1.5em and 0.5em */
+				margin: 0 0 0 0; /* default 1.5em and 0.5em */
 			}
 
 				header > p {
-					margin: 0.5em 0 0 0;
+					margin: 0 0 0 0;
 				}
 
 		/* Button */

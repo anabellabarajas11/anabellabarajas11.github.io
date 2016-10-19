@@ -15,13 +15,13 @@
 			fadeSpeed: 300,
 
 		// Size factor.
-			sizeFactor: 11.5,
+			sizeFactor: 11.5, // default 11.5
 
 		// Minimum point size.
 			sizeMin: 15, // default 15
 
 		// Maximum point size.
-			sizeMax: 20
+			sizeMax: 20 //defualt 20
 
 	};
 
@@ -68,18 +68,24 @@
 				}
 
 				// Body.
+					// TODO: create resize function that resizes specifically the resume window
+					/* DO THAT ISH HERE BOI */
+
 					$body._resize = function() {
-						var factor = ($window.width() * $window.height()) / (1440 * 900);
-						$body.css('font-size', Math.min(Math.max(Math.floor(factor * settings.sizeFactor), settings.sizeMin), settings.sizeMax) + 'pt');
+						var factor = ($window.width() * $window.height()) / (1440 * 900); // default 1440 * 900
+						//$body.css('font-size', Math.min(Math.max(Math.floor(factor * settings.sizeFactor), settings.sizeMin), settings.sizeMax) + 'pt');
 						$main.height(panels[activePanelId].outerHeight());
+						//$main.width(panels[activePanelId].outerWidth()+300);
 						$body._reposition();
 					};
 
 					$body._reposition = function() {
 						if (skel.vars.touch && (window.orientation == 0 || window.orientation == 180))
 							$wrapper.css('padding-top', Math.max((($window.height() - (panels[activePanelId].outerHeight() + $footer.outerHeight())) / 2) - $nav.height(), 30) + 'px');
-						else
+						else {
 							$wrapper.css('padding-top', ((($window.height() - panels[firstPanelId].height()) / 2) - $nav.height()) + 'px');
+							//$wrapper.css('padding-right', ((($window.width() - panels[firstPanelId].width()) / 2) - $nav.height()) + 'px');
+						}
 					};
 
 				// Panels.
@@ -144,6 +150,7 @@
 											$body._reposition();
 
 										// Resize main to height of new panel.
+										// here we cna do something to change width as hell as height
 											$main.animate({
 												height: panels[activePanelId].outerHeight()
 											}, instant ? 0 : settings.resizeSpeed, 'swing', function() {
